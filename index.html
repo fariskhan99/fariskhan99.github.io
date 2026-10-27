@@ -258,7 +258,7 @@
       margin-bottom: 0.4rem;
     }
 
-    /* Experience Card */
+    /* Experience & Education Cards */
     .exp-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
@@ -271,6 +271,7 @@
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
+      gap: 0.5rem;
       margin-bottom: 0.5rem;
     }
 
@@ -351,7 +352,7 @@
       <div class="skills-grid">
         <div class="skill-card">
           <h3>IT Operations &amp; Support</h3>
-          <p>Workstation assembly, OS imaging, hardware diagnostics, peripherals setup, and user issue resolution.</p>
+          <p>Workstation assembly, OS imaging, hardware diagnostics, peripherals setup, and user issue resolution[cite: 5].</p>
           <div class="tag-container">
             <span class="tag">Technical Support</span>
             <span class="tag">Hardware Troubleshooting</span>
@@ -375,7 +376,7 @@
 
         <div class="skill-card">
           <h3>Scripting &amp; Microcontrollers</h3>
-          <p>Procedural hardware programming, basic automation workflows, and fundamental database operations.</p>
+          <p>Procedural hardware programming, basic automation workflows, and fundamental database operations[cite: 4, 5].</p>
           <div class="tag-container">
             <span class="tag">C</span>
             <span class="tag">Basic Python</span>
@@ -397,9 +398,9 @@
           <span class="project-type">Cloud &amp; Networking</span>
         </div>
         <ul>
-          <li>Deployed a multi-tier application environment in Kubernetes, implementing network security and access controls.</li>
-          <li>Configured Calico network policies to enforce isolation rules between tiers and restrict unauthorized ingress/egress.</li>
-          <li>Systematically diagnosed and validated container-to-container connectivity via structured network testing.</li>
+          <li>Deployed a multi-tier application environment in Kubernetes, implementing network security and access controls[cite: 5].</li>
+          <li>Configured Calico network policies to enforce isolation rules between tiers and restrict unauthorized ingress/egress[cite: 4, 5].</li>
+          <li>Systematically diagnosed and validated container-to-container connectivity via structured network testing[cite: 5].</li>
         </ul>
         <div class="tag-container">
           <span class="tag">Kubernetes</span>
@@ -415,9 +416,9 @@
           <span class="project-type">Embedded &amp; Hardware</span>
         </div>
         <ul>
-          <li>Programmed an automated state-machine controller on a PIC18F4321 microcontroller using embedded C.</li>
-          <li>Integrated inputs and outputs including optical/button sensors, LED matrices, character displays, and audio indicators.</li>
-          <li>Probed UART serial outputs and bus lines using an 8-channel logic analyzer to debug signal timing and isolate faults.</li>
+          <li>Programmed an automated state-machine controller on a PIC18F4321 microcontroller using embedded C[cite: 5].</li>
+          <li>Integrated inputs and outputs including optical/button sensors, LED matrices, character displays, and audio indicators[cite: 5].</li>
+          <li>Probed UART serial outputs and bus lines using an 8-channel logic analyzer to debug signal timing and isolate faults[cite: 5].</li>
         </ul>
         <div class="tag-container">
           <span class="tag">C</span>
@@ -436,14 +437,6 @@
         
         <div class="skill-card">
           <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-            <h3>Calbright College</h3>
-            <span class="tag" style="color: var(--accent-green); border-color: rgba(63, 185, 80, 0.3);">In Progress</span>
-          </div>
-          <p><strong>IT Support Certificate Program (CompTIA A+ Prep)</strong>. Focuses on PC hardware diagnostics, operating systems, network configuration, and enterprise ticketing workflows.</p>
-        </div>
-
-        <div class="skill-card">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
             <h3>AWS Solutions Architect</h3>
             <span class="tag" style="color: var(--accent-blue); border-color: rgba(88, 166, 255, 0.3);">In Progress</span>
           </div>
@@ -452,10 +445,10 @@
 
         <div class="skill-card">
           <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-            <h3>Per Scholas</h3>
+            <h3>Per Scholas &amp; Cisco Academy</h3>
             <span class="tag" style="color: var(--text-muted); border-color: var(--border-subtle);">Completed Oct 2026</span>
           </div>
-          <p><strong>Computer Hardware Basics Certificate</strong>. Practical training covering desktop and server internal components, motherboard architectures, power systems, and physical hardware assembly.</p>
+          <p><strong>Computer Hardware Basics Certificate</strong>. Practical training covering desktop and workstation internal components, power delivery systems, storage interfaces, and physical hardware assembly[cite: 4, 17].</p>
         </div>
 
       </div>
@@ -470,9 +463,9 @@
           <span class="exp-date">Mar 2018 &ndash; Jan 2021</span>
         </div>
         <ul>
-          <li>Provided hands-on technical support for Windows workstations, network printers, and office equipment, minimizing operating downtime.</li>
-          <li>Configured desktop hardware, peripheral connectivity, and user profile setups across daily operations.</li>
-          <li>Troubleshooted local connectivity, application errors, and system performance bottlenecks for on-site staff.</li>
+          <li>Provided hands-on technical support for Windows workstations, network printers, and office equipment, minimizing operating downtime[cite: 5].</li>
+          <li>Configured desktop hardware, peripheral connectivity, and user profile setups across daily operations[cite: 5].</li>
+          <li>Troubleshooted local connectivity, application errors, and system performance bottlenecks for on-site staff[cite: 5].</li>
         </ul>
       </div>
     </section>
@@ -480,13 +473,29 @@
     <!-- Education -->
     <section id="education">
       <h2 class="section-title">Education</h2>
-      <div class="exp-card">
+      
+      <!-- Cal Poly Pomona -->
+      <div class="exp-card" style="margin-bottom: 1.25rem;">
         <div class="exp-header">
           <span class="exp-title">California State Polytechnic University, Pomona</span>
           <span class="exp-date">B.S. Computer Engineering</span>
         </div>
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
-          Relevant Coursework: Computer Networks, Operating Systems, Network Forensics, Fundamentals of Cybersecurity, Microcontrollers, Data Structures &amp; Algorithms, Software Engineering.
+          Relevant Coursework: Computer Networks, Operating Systems, Network Forensics, Fundamentals of Cybersecurity, Microcontrollers &amp; Embedded Systems, Data Structures &amp; Algorithms, Software Engineering[cite: 4, 5].
+        </p>
+      </div>
+
+      <!-- Calbright College -->
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-title">Calbright College</span>
+          <span class="exp-date" style="color: var(--accent-green);">In Progress &bull; Enrolled Oct 2026</span>
+        </div>
+        <p style="color: var(--text-main); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem;">
+          IT Support Certificate Program (CompTIA A+ Preparation)
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+          Curriculum focused on PC hardware diagnostics, Windows/Linux operating system environments, network fundamentals (TCP/IP, DNS, DHCP), and enterprise technical support troubleshooting[cite: 4, 5].
         </p>
       </div>
     </section>
