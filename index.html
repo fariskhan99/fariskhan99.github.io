@@ -3,257 +3,256 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faris Khan | Computer Engineering & Systems</title>
-  
-  <!-- IBM Plex Typography -->
+  <title>Faris Khan | Computer Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-body: #0d1117;
-      --bg-card: #161b22;
-      --bg-card-hover: #1c2128;
-      --border-subtle: #30363d;
-      --border-active: #58a6ff;
-      --text-main: #f0f6fc;
-      --text-muted: #8b949e;
-      --text-accent: #58a6ff;
-      --text-badge: #3fb950;
-      --badge-bg: rgba(63, 185, 80, 0.1);
-      --badge-border: rgba(63, 185, 80, 0.3);
-      --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-code: 'IBM Plex Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --bg: #0d1117;
+      --card: #161b22;
+      --card-hover: #1f242c;
+      --border: #30363d;
+      --text: #f0f6fc;
+      --muted: #8b949e;
+      --blue: #58a6ff;
+      --green: #3fb950;
     }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      background-color: var(--bg-body);
-      color: var(--text-main);
-      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', -apple-system, sans-serif;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      padding-bottom: 4rem;
     }
-
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
+    .container { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+    
     /* Navigation */
-    .navbar {
+    nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background-color: rgba(13, 17, 23, 0.85);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(13, 17, 23, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
       padding: 1rem 0;
+      z-index: 10;
     }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: var(--text); text-decoration: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--text); }
 
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand-logo {
-      font-family: var(--font-code);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-main);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-logo:hover {
-      color: var(--text-accent);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.15s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 5.5rem 0 4rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      font-family: var(--font-code);
+    /* Hero */
+    .hero { padding: 4.5rem 0 3rem; }
+    .status {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
       font-size: 0.8rem;
-      color: var(--text-badge);
-      background-color: var(--badge-bg);
-      border: 1px solid var(--badge-border);
-      padding: 0.3rem 0.75rem;
-      border-radius: 9999px;
-      margin-bottom: 1.5rem;
+      color: var(--green);
+      background: rgba(63, 185, 80, 0.1);
+      border: 1px solid rgba(63, 185, 80, 0.3);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
     }
-
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 650px;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    /* Buttons */
+    h1 { font-size: 2.75rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .bio { font-size: 1.15rem; color: var(--muted); max-width: 620px; margin-bottom: 1.75rem; }
+    .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      display: inline-block;
       padding: 0.65rem 1.25rem;
       border-radius: 6px;
-      font-size: 0.95rem;
       font-weight: 600;
+      font-size: 0.95rem;
       text-decoration: none;
-      transition: all 0.2s ease;
+      transition: 0.2s ease;
     }
-
-    .btn-primary {
-      background-color: var(--text-accent);
-      color: #0d1117;
-      border: 1px solid var(--text-accent);
-    }
-
-    .btn-primary:hover {
-      background-color: #79b8ff;
-      border-color: #79b8ff;
-    }
-
-    .btn-secondary {
-      background-color: var(--bg-card);
-      color: var(--text-main);
-      border: 1px solid var(--border-subtle);
-    }
-
-    .btn-secondary:hover {
-      background-color: var(--bg-card-hover);
-      border-color: var(--text-muted);
-    }
-
-    .btn-ghost {
-      color: var(--text-muted);
-      padding: 0.65rem 0.75rem;
-    }
-
-    .btn-ghost:hover {
-      color: var(--text-accent);
-    }
+    .btn-main { background: var(--blue); color: #0d1117; }
+    .btn-main:hover { background: #79b8ff; }
+    .btn-sub { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+    .btn-sub:hover { background: var(--card-hover); border-color: var(--muted); }
 
     /* Sections */
-    .section {
-      padding: 4rem 0;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .section-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 2rem;
-    }
+    section { padding: 3rem 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
 
     /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .skill-card {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-subtle);
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+    .skill-box {
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 1.75rem 1.5rem;
-      display: flex;
-      flex-direction: column;
+      padding: 1.5rem;
     }
+    .skill-box h3 { font-size: 1.05rem; color: var(--blue); margin-bottom: 0.5rem; }
+    .skill-box p { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
 
-    .skill-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
+    /* Projects */
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.15s ease, border-color 0.15s ease;
     }
-
-    .skill-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    .project-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(88, 166, 255, 0.4);
     }
-
-    .skill-card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1.25rem;
-      flex-grow: 1;
-    }
-
-    .pill-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .pill {
-      font-family: var(--font-code);
+    .card-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
+    .card-top h3 { font-size: 1.25rem; }
+    .tag {
+      font-family: 'IBM Plex Mono', monospace;
       font-size: 0.75rem;
-      background-color: var(--bg-body);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
+      color: var(--blue);
+      background: rgba(88, 166, 255, 0.1);
       padding: 0.2rem 0.5rem;
       border-radius: 4px;
     }
-
-    /* Projects Grid */
-    .project-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 1.75rem;
+    .card-desc { font-size: 0.95rem; color: var(--muted); margin-bottom: 1.25rem; }
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .tech-stack span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
     }
+    .repo-link { font-size: 0.9rem; font-weight: 600; color: var(--blue); text-decoration: none; }
+    .repo-link:hover { text-decoration: underline; }
 
-    .project-card {
-      background-color: var(--bg-card);
-      border:
+    /* Education Card */
+    .edu-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .edu-card h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
+    .edu-card p { font-size: 0.9rem; color: var(--muted); }
+
+    /* Footer */
+    footer { padding-top: 3rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--blue); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="brand">faris.dev</a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="mailto:fariskhan1022@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero container">
+    <span class="status">&#9679; Available for Engineering Roles</span>
+    <h1>Faris Khan</h1>
+    <p class="bio">
+      Computer Engineering graduate specializing in embedded systems, low-level firmware architecture, and Linux infrastructure automation.
+    </p>
+    <div class="cta-row">
+      <a href="mailto:fariskhan1022@gmail.com" class="btn btn-main">Contact Me</a>
+      <a href="https://github.com/fariskhan99" target="_blank" rel="noopener noreferrer" class="btn btn-sub">GitHub Profile</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="skills">
+      <h2>Technical Stack</h2>
+      <div class="grid-3">
+        <div class="skill-box">
+          <h3>Embedded &amp; Firmware</h3>
+          <p>C, C++, RP2040 (Pico-SDK), ESP32, FreeRTOS, I2C, SPI, UART, PulseView, Logic Analyzers</p>
+        </div>
+        <div class="skill-box">
+          <h3>Systems &amp; DevOps</h3>
+          <p>Linux, Bash scripting, Python, Docker, Git, CI/CD automation, Subprocess IPC pipelines</p>
+        </div>
+        <div class="skill-box">
+          <h3>Software Engineering</h3>
+          <p>Java, Data Structures &amp; Algorithms, Object-Oriented Design, Hardware/Software Integration</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Engineering Projects</h2>
+
+      <div class="project-card">
+        <div class="card-top">
+          <h3>RP2040 IR Light Gun Architecture</h3>
+          <span class="tag">Embedded Systems</span>
+        </div>
+        <p class="card-desc">
+          Low-latency custom firmware implemented using the Raspberry Pi Pico C/C++ SDK. Features microsecond IR signal optical decoding, active debouncing, and direct USB HID host reporting without operating system latency.
+        </p>
+        <div class="tech-stack">
+          <span>C/C++</span>
+          <span>RP2040</span>
+          <span>Pico-SDK</span>
+          <span>USB HID</span>
+        </div>
+        <a href="https://github.com/fariskhan99" target="_blank" rel="noopener noreferrer" class="repo-link">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="project-card">
+        <div class="card-top">
+          <h3>Containerized Task Runner Engine</h3>
+          <span class="tag">Systems / Python</span>
+        </div>
+        <p class="card-desc">
+          Automated task-execution engine running inside Docker containers. Manages asynchronous process queues, deadlock avoidance, non-blocking stream redirection, and fault-tolerant process cleanup.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Docker</span>
+          <span>Linux POSIX</span>
+          <span>IPC</span>
+        </div>
+        <a href="https://github.com/fariskhan99" target="_blank" rel="noopener noreferrer" class="repo-link">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="project-card">
+        <div class="card-top">
+          <h3>Brushless ESC Signal Validation Testbench</h3>
+          <span class="tag">Hardware Testing</span>
+        </div>
+        <p class="card-desc">
+          Signal integrity testbench for 3-phase motor controllers. Captured and verified PWM duty cycle stability and bus traffic drops under high throttle using logic analyzers and oscilloscopes.
+        </p>
+        <div class="tech-stack">
+          <span>PulseView</span>
+          <span>Logic Analyzer</span>
+          <span>Oscilloscope</span>
+          <span>PWM</span>
+        </div>
+        <a href="https://github.com/fariskhan99" target="_blank" rel="noopener noreferrer" class="repo-link">View on GitHub &rarr;</a>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-card">
+        <h3>California State Polytechnic University, Pomona</h3>
+        <p>Bachelor of Science in Computer Engineering</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Faris Khan &bull; Hosted on <a href="https://github.com/fariskhan99" target="_blank" rel="noopener noreferrer">GitHub Pages</a></p>
+    </footer>
+  </div>
+
+</body>
+</html>
